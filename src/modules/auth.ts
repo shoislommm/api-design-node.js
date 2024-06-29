@@ -31,7 +31,6 @@ export const protect = (req, res, next) => {
     const [, token] = bearer.split(" ")
 
     if (!token) {
-        console.log("here")
         res.status(401)
         res.json({ message: "not valid token" })
         return
@@ -45,7 +44,7 @@ export const protect = (req, res, next) => {
     } catch (error) {
         console.error(error)
         res.status(401)
-        res.json({ message: "Not valid token" })
+        res.json({ message: "not valid token" })
         return
     }
 }

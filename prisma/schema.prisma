@@ -44,7 +44,7 @@ model Update {
 
   title   String
   body    String
-  satus   UPDATE_STATUS @default(IN_PROGRESS)
+  status   UPDATE_STATUS @default(IN_PROGRESS)
   version String?
   asset   String?
 
